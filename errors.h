@@ -12,6 +12,8 @@ typedef enum {
     ERROR_FILE_NOT_FOUND,
     ERROR_FILE_OPEN,
     ERROR_JSON_PARSE,
+    ERROR_JSON_GET_OBJECT,
+    ERROR_JSON_GET_ARRAY,
 } ErrorCode;
 
 typedef struct {

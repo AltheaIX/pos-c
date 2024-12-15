@@ -14,7 +14,7 @@ int main(void) {
         return error.code;
     }*/
 
-    cJSON *json = parseJsonFromFile(&error, "zxczxcvzxcvzxcv.json");
+    cJSON *json = parseJsonFromFile(&error, "data.json");
     if (error.code != ERROR_NONE) {
         printf("Error message: %s\n", getErrorMessage(&error));
         return error.code;
@@ -24,7 +24,17 @@ int main(void) {
     cJSON *electronics = cJSON_GetObjectItem(json, "electronics");
     if (electronics == NULL) {
         printf("No electronics found\n");
+        return ERROR_JSON_GET_OBJECT;
     }
+
+    cJSON *electronic = cJSON_GetArrayItem(electronics, 0);
+    if (electronic == NULL) {
+        printf("No electronics found\n");
+        return ERROR_JSON_GET_ARRAY;
+    }
+
+    cJSON *id = cJSON_GetObjectItem(electronic, "id");
+    printf("ID: %d\n", id->valueint);
 
     return ERROR_NONE;
 }
