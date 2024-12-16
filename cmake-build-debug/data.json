@@ -4,5 +4,11 @@
 			"name":	"Samsung",
 			"price":	0,
 			"stock":	0
+		}, {
+			"id":	10,
+			"name":	"Test"
+		}, {
+			"id":	10,
+			"name":	"Test"
 		}]
 }

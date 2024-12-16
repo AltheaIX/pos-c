@@ -8,5 +8,6 @@
 #include "cjson/cJSON.h"
 
 cJSON* parseJsonFromFile(Error *error, const char* fileName);
+void addObjectToArray(cJSON* json, cJSON* array);
 
 #endif //JSON_H

@@ -31,3 +31,4 @@ cJSON* parseJsonFromFile(Error *error, const char* fileName) {
 
     return root;
 }
+
